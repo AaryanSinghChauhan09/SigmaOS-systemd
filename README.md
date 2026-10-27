@@ -1,15 +1,38 @@
-# SigmaOS-systemd
+    # SigmaOS-systemd
 
-Part of the SigmaOS multi-repository architecture.
+    Service unit manager (start/enable/mask/status)
 
-## Principles
-- MODULARITY: Single responsibility per repository
-- LOOSE COUPLING: Minimal dependencies between repos
-- INTERFACE SEGREGATION: Clear, focused public APIs
-- DETERMINISTIC TESTING: Comprehensive test coverage
+    Part of the **SigmaOS** sovereign operating-system ecosystem — a multi-repository
+    distribution modelled on Linux Mint and Omarchy Linux. See the parent
+    [`SigmaOS`](https://github.com/AaryanSinghChauhan09/SigmaOS) repository for the
+    full component index.
 
-## License
-SPDX-License-Identifier: GPL-3.0-or-later
+    ## Upstream inspirations
+    - https://github.com/linuxmint/systemd-betsy
 
-## Copyright
-Copyright (C) 2026 SigmaOS Project
+    ## Design principles applied
+    - **Pure Plan / Thin Execute**
+- **Fail-Fast**
+- **Deterministic Testing**
+- **KISS**
+- **Information Hiding**
+
+    ## Usage
+    Verbs: `enable, disable, start, status, cat`
+
+    ```
+    $ sigma-unit --store ./store enable sshd.service
+$ sigma-unit --store ./store start sshd.service
+$ sigma-unit --store ./store status sshd.service
+$ sigma-unit --store ./store cat sshd.service
+
+    ```
+
+    ## Build & test
+    ```
+    make build
+    make test
+    ```
+
+    ## Licence
+    GNU General Public License v3.0 (FOSS).
