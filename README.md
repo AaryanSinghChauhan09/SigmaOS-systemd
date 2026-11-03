@@ -1,38 +1,40 @@
-    # SigmaOS-systemd
+# SigmaOS-systemd
 
-    Service unit manager (start/enable/mask/status)
+SigmaOS component inspired by Arch Linux and Debian architecture.
 
-    Part of the **SigmaOS** sovereign operating-system ecosystem — a multi-repository
-    distribution modelled on Linux Mint and Omarchy Linux. See the parent
-    [`SigmaOS`](https://github.com/AaryanSinghChauhan09/SigmaOS) repository for the
-    full component index.
+## Overview
 
-    ## Upstream inspirations
-    - https://github.com/linuxmint/systemd-betsy
+This component provides essential functionality for the SigmaOS operating system,
+following the modular design principles of Arch Linux and the stability focus of Debian.
 
-    ## Design principles applied
-    - **Pure Plan / Thin Execute**
-- **Fail-Fast**
-- **Deterministic Testing**
-- **KISS**
-- **Information Hiding**
+## Features
 
-    ## Usage
-    Verbs: `enable, disable, start, status, cat`
+- Modular architecture
+- Minimal dependencies
+- Well-documented APIs
+- Comprehensive testing
 
-    ```
-    $ sigma-unit --store ./store enable sshd.service
-$ sigma-unit --store ./store start sshd.service
-$ sigma-unit --store ./store status sshd.service
-$ sigma-unit --store ./store cat sshd.service
+## Building
 
-    ```
+```bash
+cargo build --release
+```
 
-    ## Build & test
-    ```
-    make build
-    make test
-    ```
+## Testing
 
-    ## Licence
-    GNU General Public License v3.0 (FOSS).
+```bash
+cargo test
+```
+
+## License
+
+MIT License - See LICENSE file for details.
+
+## Contributing
+
+See CONTRIBUTING.md for guidelines.
+
+## Links
+
+- Repository: https://github.com/AaryanSinghChauhan09/SigmaOS-systemd
+- SigmaOS: https://github.com/AaryanSinghChauhan09
