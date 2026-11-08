@@ -2,6 +2,8 @@
 name = "sigmaos_systemd"
 version = "0.1.0"
 edition = "2021"
+license = "MIT"
+description = "SigmaOS systemd component inspired by Linux Mint / Omarchy / Arch Linux."
 
 [lib]
 name = "sigmaos_systemd"
