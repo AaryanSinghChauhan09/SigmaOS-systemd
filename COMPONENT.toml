@@ -1,6 +1,6 @@
 [component]
 name = "SigmaOS-systemd"
-description = "SigmaOS subsystem component for systemd"
+description = "Service unit manager (start/enable/mask/status)"
 version = "0.1.0"
 tier = 0
 
