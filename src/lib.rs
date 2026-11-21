@@ -7,6 +7,9 @@
 
 #![forbid(unsafe_code)]
 
+/// systemd unit manager module.
+pub mod sigmasystemd;
+
 use std::fmt;
 use std::collections::BTreeMap;
 
