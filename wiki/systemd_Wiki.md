@@ -1,18 +1,18 @@
-# SigmaOS-SigmaOS-systemd Component Wiki
+# SigmaOS-systemd Component Wiki
 
 ## Overview
-SigmaOS-SigmaOS-systemd provides Service unit manager (start/enable/mask/status) for the SigmaOS operating system. It demonstrates the subsystem and integration within the SigmaOS ecosystem, following the principles of clear abstraction and deterministic initialization.
+SigmaOS-systemd provides component for the SigmaOS operating system. It demonstrates the subsystem and integration within the SigmaOS ecosystem, following the principles of clear abstraction and deterministic initialization.
 
 ## Principles
-- Single Responsibility
-- SigmaOS-systemd Abstraction
-- Fail-Fast on SigmaOS-systemd Initialization Errors
-- Deterministic SigmaOS-systemd Setup
-- Clear Abstraction Over SigmaOS-systemd APIs
-- Composition over Inheritance for SigmaOS-systemd extensions
+- **Single Responsibility**: Each component has a single well-defined purpose
+- **SigmaOS-systemd Abstraction**: Clear abstraction over the component's APIs and functionality
+- **Fail-Fast on SigmaOS-systemd Initialization Errors**: Fail-fast principle for initialization errors
+- **Deterministic SigmaOS-systemd Setup**: Deterministic initialization and configuration
+- **Clear Abstraction Over SigmaOS-systemd APIs**: Well-defined, clear APIs
+- **Composition over Inheritance for SigmaOS-systemd extensions**: Use composition patterns for extensions
 
 ## Architecture
-SigmaOS-SigmaOS-systemd follows a SigmaOS-systemd pattern:
+SigmaOS-systemd follows a SigmaOS-systemd pattern:
 - **SigmaOS-systemd Core**: Provides SigmaOS-systemd support, SigmaOS-systemd management, and SigmaOS-systemd tracking
 - **Management**: Supports SigmaOS-systemd management, SigmaOS-systemd configuration, and SigmaOS-systemd lifecycle
 - **Tracking**: Supports SigmaOS-systemd status, SigmaOS-systemd tracking, and SigmaOS-systemd lifecycle
@@ -20,10 +20,10 @@ SigmaOS-SigmaOS-systemd follows a SigmaOS-systemd pattern:
 
 ## API
 The component provides the following public APIs:
--  - Manage a SigmaOS-systemd by given configuration
--  - Register a SigmaOS-systemd by given name
--  - Get SigmaOS-systemd status and SigmaOS-systemd availability
--  - Track SigmaOS-systemd management and SigmaOS-systemd tracking
+- Manage a SigmaOS-systemd by given configuration
+- Register a SigmaOS-systemd by given name
+- Get SigmaOS-systemd status and SigmaOS-systemd availability
+- Track SigmaOS-systemd management and SigmaOS-systemd tracking
 - Error types for SigmaOS-systemd failure scenarios or unsupported SigmaOS-systemd types
 
 ## Test Structure (Arrange-Act-ASSERT)
@@ -32,11 +32,8 @@ All tests follow the AAA pattern:
 2. **Act**: Execute the code under test (SigmaOS-systemd init, SigmaOS-systemd management)
 3. **Assert**: Verify the expected SigmaOS-systemd results
 
-Example:
-
-
 ## Development
-- Follows Rust best practices with 
+- Follows best practices with clear abstraction boundaries
 - SigmaOS-systemd initialization is best-effort; gracefully degrades on unsupported configurations
 - Comprehensive error types for all SigmaOS-systemd failure scenarios
 - Unit tests provided for SigmaOS-systemd management and configuration
